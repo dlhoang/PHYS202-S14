@@ -1,0 +1,29 @@
+Academic Honesty Pledge
+
+You are expected to...
+- create / develop your own assignments (including source code)
+- understand your solutions
+- acknowledge the help of others in writing
+cite its source on assignments for which inclusion of code other than your own has been explicitly permitted
+protect yourself from being suspected of misconduct by not allowing others to see your assignment before it is submitted
+contact your instructor for clarification about assignment requirements
+
+You are encouraged to...
+- discuss general approaches to a solution
+- share knowledge with other students about syntax errors, coding tricks, or other language-specific information that makes programming easier
+- provide and receive help with simple execution errors
+- provide and receive help with using the computing environment
+- engage, with other students, in a general discussion of the nature of an assignment, the requirements for an assignment, or general implementation strategies
+- engage, with other students, in discussion of course concepts or programming strategies in preparation for an assignment or examination
+
+You are guilty of academic misconduct if you...
+- show your source code to anyone in hardcopy or electronic form
+- look at another student's solution in hardcopy or electronic form
+- submit as your own work the files, solutions, or documents prepared by others
+- submit assignments as your own without attribution if they were created in collaboration with someone
+- make modifications to someone else's solution in an effort to disguise misconduct
+- use unauthorized materials during an examination, or communicate during an examination in an unauthorized way with another person
+- knowingly permit another person to turn in your work as his or her own work
+
+Signed: Di Hoang
+Dated: 04/03/14
