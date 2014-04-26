@@ -1,5 +1,5 @@
-Image link: 
-Threshold used in monochrome: 300
-Algorithm used to count stars: <function fastfill at 0x000000000ABD4128>
+Image link: http://imgsrc.hubblesite.org/hu/db/images/hs-1995-32-c-full_jpg.jpg
+Threshold used in monochrome: 600
+Algorithm used to count stars: <function fastfill at 0x000000000C369EB8>
 Time took to process: 
 Stars found: 82

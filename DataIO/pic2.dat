@@ -1,5 +1,5 @@
-Image link: 
-Threshold used in monochrome: 500
-Algorithm used to count stars: <function fillrec at 0x000000000A89C828>
+Image link: http://imgsrc.hubblesite.org/hu/db/images/hs-1993-13-a-large_web.jpg
+Threshold used in monochrome: 600
+Algorithm used to count stars: <function fillrec at 0x000000000C369048>
 Time took to process: 
 Stars found: 72
