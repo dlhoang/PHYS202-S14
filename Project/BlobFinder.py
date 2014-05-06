@@ -1,4 +1,3 @@
-%pylab inline
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -38,7 +37,7 @@ def monochrome(picture, tau):
             if r+g+b <= threshold: 
                 temp[x,y] = BLACK
             else:
-                temp[x,y] = WHITE   
+                temp[x,y] = RED   
     
 def fill(picture, xsize, ysize, xstart, ystart):
     queue = [(xstart,ystart)]
@@ -46,8 +45,8 @@ def fill(picture, xsize, ysize, xstart, ystart):
     blob.add(xstart,ystart)
     while queue:
         x,y,queue = queue[0][0], queue[0][1], queue[1:]
-        if picture[x,y] == BLACK:
-            picture[x,y] = RED
+        if picture[x,y] == RED:
+            picture[x,y] = WHITE
             blob.add(x,y)
             if x > 0:
                 queue.append((x-1,y))
@@ -92,7 +91,7 @@ def printBeads(P,picture,tau):
     beads = BlobFinder(pic,tau)
     for bead in getBeads(P,picture,tau):
         if bead.mass() >= P:
-            print "Beads with at least %s pixels", %P + "\n"
+            print "Beads with at least %s pixels" %P + "\n"
             print "mass: " + bead.mass() + "\n"
             print "center of mass: " + bead.centerOfMass() + "\n"
     
@@ -100,7 +99,3 @@ def printBeads(P,picture,tau):
         print "All founded beads: " + "\n"
         print "mass: " + bead.mass() + "\n"
         print "center of mass: " + bead.centerOfMass() + "\n"
-        
-blob = Blob()
-blob.add(1,3)
-print blob
