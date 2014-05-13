@@ -110,13 +110,3 @@ def printBeads(P,picture,tau):
         print "All founded beads: "
         print "mass: %s" %bead.mass()
         print "center of mass: %s %s" %bead.centerOfMass()
-        
-        
-global ext
-ext = ".jpg"
-
-imageFile = "frame00000.jpg"
-im1 = Image.open(imageFile)
-BlobFinder(im1,180)
-countBeads(25,im1,180)
-plt.imshow(im1)
