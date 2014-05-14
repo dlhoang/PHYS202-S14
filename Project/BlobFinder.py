@@ -17,9 +17,11 @@ class Blob():
         self.blob.append([i,j])
     def mass(self):
         return len(self.blob)
+    
+    # ROUND TO 4 DECIMALS
     def distanceTo(self,blob):
-        distance = round(sqrt(((self.centerOfMass()[0] - blob.centerOfMass()[0])**2)\
-                        + ((self.centerOfMass()[1] - blob.centerOfMass()[1])**2)),4)
+        distance = format(sqrt(((self.centerOfMass()[0] - blob.centerOfMass()[0])**2)\
+                        + ((self.centerOfMass()[1] - blob.centerOfMass()[1])**2)),'.4f')
     def centerOfMass(self):
         xtot, ytot = 0, 0
         for pix in self.blob:
@@ -28,8 +30,6 @@ class Blob():
         xcm = float(xtot)/float(len(self.blob))
         ycm = float(ytot)/float(len(self.blob))
         return xcm, ycm
-
-# blob = Blob()
 
 def monochrome(picture,tau):
     xsize, ysize = picture.size
@@ -87,26 +87,25 @@ def countBeads(P,picture,tau):
     for bead in beads:
         if bead.mass() >= P:
             count = count + 1
-    print count
+    return count
     
 def getBeads(P,picture,tau):
     '''return all beads with >= P pixels'''
-    # blob = Blob()
     beads = BlobFinder(picture,tau)
     blobs = []
     for bead in beads:
         if bead.mass() >=P:
-            blobs.append(blob)
+            blobs.append(beads)
     return blobs
              
 def printBeads(P,picture,tau):
     beads = BlobFinder(picture,tau)
+    print "Beads with at least %s pixels" %P
     for bead in beads:
-        if bead.mass >= P:
-            print "Beads with at least %s pixels" %P
+        if bead.mass() >= P:
             print "mass: %s" %bead.mass()
             print "center of mass: %s %s" %bead.centerOfMass()
-    for bead in getBeads(P,picture,tau):
-        print "All founded beads: "
+    print "All founded beads: "
+    for bead in beads:
         print "mass: %s" %bead.mass()
         print "center of mass: %s %s" %bead.centerOfMass()
