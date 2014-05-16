@@ -20,8 +20,10 @@ class Blob():
     
     # ROUND TO 4 DECIMALS
     def distanceTo(self,blob):
-        distance = format(sqrt(((self.centerOfMass()[0] - blob.centerOfMass()[0])**2)\
-                        + ((self.centerOfMass()[1] - blob.centerOfMass()[1])**2)),'.4f')
+        distance = round((((self.centerOfMass()[0] - blob.centerOfMass()[0])**2)\
+                        + ((self.centerOfMass()[1] - blob.centerOfMass()[1])**2))**0.5,4)
+        return distance
+    
     def centerOfMass(self):
         xtot, ytot = 0, 0
         for pix in self.blob:
@@ -95,7 +97,7 @@ def getBeads(P,picture,tau):
     blobs = []
     for bead in beads:
         if bead.mass() >=P:
-            blobs.append(beads)
+            blobs.append(bead)
     return blobs
              
 def printBeads(P,picture,tau):
