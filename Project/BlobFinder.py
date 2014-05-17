@@ -19,7 +19,6 @@ class Blob():
     
     # ROUND TO 4 DECIMALS
     def distanceTo(self,blob):
-<<<<<<< HEAD
         distance = round((((self.centerOfMass()[0] - blob.centerOfMass()[0])**2)\
                         + ((self.centerOfMass()[1] - blob.centerOfMass()[1])**2))**0.5,4)
         return distance
