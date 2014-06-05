@@ -46,7 +46,7 @@ def monochrome(picture,tau):
         for y in range(ysize):
             r,g,b = temp[x,y]
             # if color is higher than luminance threshold, consider a blob and turn red
-            if (r+g+b)/3 >= tau:
+            if (r+g+b)/3 <= tau:
                 temp[x,y] = RED
             # else consider background noise and turn black
             else:
