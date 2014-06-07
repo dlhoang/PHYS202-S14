@@ -42,6 +42,7 @@ def monochrome(picture,tau):
     """ turns blobs in a picture red using luminance threshold tau and turn background noise black """
     xsize, ysize = picture.size
     temp = picture.load()
+
     for x in range(xsize):
         for y in range(ysize):
             r,g,b = temp[x,y]
